@@ -1,0 +1,7 @@
+{
+  "name": "Dubai Rapid Car Recovery",
+  "description": "24/7 Premium Emergency Car Recovery & On-Site Car Repair across Dubai. 30-minute response time for towing, battery replacement, and roadside mechanical repairs.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
