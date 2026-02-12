@@ -24,7 +24,7 @@ const WhyChooseUs: React.FC = () => {
               className="relative"
             >
               <img 
-                src="/images/why-choose-us.jpg" 
+                src="/images/why-choose-us.webp" 
                 alt="Professional Mechanic Team in Dubai providing expert repair services"
                 className="rounded-3xl shadow-2xl relative z-10 border border-white/10"
               />

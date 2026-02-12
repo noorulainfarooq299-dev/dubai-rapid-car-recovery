@@ -50,7 +50,7 @@ const RepairServices: React.FC = () => {
           >
             <div className="aspect-square rounded-[3rem] overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl">
               <img 
-                src="/images/repair-services.png" 
+                src="/images/repair-services.webp" 
                 alt="Certified mechanic repairing car engine on-site for immediate roadside support"
                 className="w-full h-full object-cover"
               />

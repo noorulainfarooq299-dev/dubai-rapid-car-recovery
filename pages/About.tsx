@@ -49,8 +49,8 @@ const About: React.FC = () => {
             </div>
 
             <div className="relative">
-              <img 
-                src="/public/images/bg-about.jpg" 
+              <img
+                src="/images/bg-about.webp"
                 alt="Our Professional Fleet"
                 className="rounded-2xl border border-white/10"
               />
