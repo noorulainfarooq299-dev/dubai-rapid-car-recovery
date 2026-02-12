@@ -6,97 +6,148 @@ import { COMPANY_NAME, PHONE_NUMBER, SERVICES, SERVICE_AREAS } from '../constant
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black border-t border-white/5 pt-24 pb-12 overflow-hidden relative">
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
-          {/* Company Info */}
-          <div className="space-y-8">
-            <Link to="/" className="flex items-center space-x-3">
-              <div className="bg-accent p-2 rounded">
-                <Shield size={24} className="text-black" />
-              </div>
-              <span className="font-extrabold text-2xl tracking-tighter uppercase text-white">
-                RAPID<span className="text-accent italic">RECOVERY</span>
-              </span>
-            </Link>
-            <p className="text-gray-500 text-sm leading-relaxed font-medium">
-              Dubai's premium emergency roadside network. Specializing in high-speed car recovery and professional on-site mechanical repairs available 24/7 across the city.
-            </p>
-            <div className="flex space-x-4">
-              {[Facebook, Instagram, Twitter].map((Social, i) => (
-                <a key={i} href="#" className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-accent hover:text-black transition-all duration-300 border border-white/10 group">
-                  <Social size={20} />
-                </a>
-              ))}
-            </div>
-          </div>
+   <footer className="bg-black border-t border-white/5 pt-16 md:pt-24 pb-10 md:pb-12 overflow-hidden relative">
+  
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-          {/* Quick Links */}
-          <div className="space-y-8">
-            <h3 className="text-white font-black uppercase tracking-widest text-xs border-l-4 border-accent pl-4">Company</h3>
-            <ul className="space-y-4">
-              <li><Link to="/" className="text-gray-500 text-sm hover:text-accent transition-colors font-bold uppercase tracking-wider">Home</Link></li>
-              <li><Link to="/services" className="text-gray-500 text-sm hover:text-accent transition-colors font-bold uppercase tracking-wider">Services</Link></li>
-              <li><Link to="/about" className="text-gray-500 text-sm hover:text-accent transition-colors font-bold uppercase tracking-wider">About Us</Link></li>
-              <li><Link to="/contact" className="text-gray-500 text-sm hover:text-accent transition-colors font-bold uppercase tracking-wider">Contact</Link></li>
-            </ul>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-16 mb-16 md:mb-20">
+      
+      {/* Company Info */}
+      <div className="space-y-6 md:space-y-8">
+        <Link to="/" className="flex items-center space-x-3">
+          <div className="bg-accent p-2 rounded">
+            <Shield size={22} className="text-black" />
           </div>
+          <span className="font-extrabold text-xl sm:text-2xl tracking-tighter uppercase text-white">
+            RAPID<span className="text-accent italic">RECOVERY</span>
+          </span>
+        </Link>
 
-          {/* Services */}
-          <div className="space-y-8">
-            <h3 className="text-white font-black uppercase tracking-widest text-xs border-l-4 border-accent pl-4">Expertise</h3>
-            <ul className="space-y-4">
-              {SERVICES.slice(0, 5).map(service => (
-                <li key={service.id}>
-                  <Link to="/services" className="text-gray-500 text-xs hover:text-accent transition-colors font-bold uppercase tracking-wider">{service.title}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <p className="text-gray-500 text-sm leading-relaxed font-medium">
+          Dubai's premium emergency roadside network. Specializing in high-speed car recovery and professional on-site mechanical repairs available 24/7 across the city.
+        </p>
 
-          {/* Contact */}
-          <div className="space-y-8">
-            <h3 className="text-white font-black uppercase tracking-widest text-xs border-l-4 border-accent pl-4">Headquarters</h3>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <MapPin size={20} className="text-accent flex-shrink-0" />
-                <span className="text-gray-500 text-sm font-medium">Al Quoz Industrial Area 3, Dubai, United Arab Emirates</span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <Phone size={20} className="text-accent flex-shrink-0" />
-                <a href={`tel:${PHONE_NUMBER}`} className="text-white text-lg font-black tracking-tight hover:text-accent transition-colors">{PHONE_NUMBER}</a>
-              </div>
-              <div className="flex items-center space-x-4">
-                <Mail size={20} className="text-accent flex-shrink-0" />
-                <span className="text-gray-500 text-sm font-medium">dispatch@dubairapid.com</span>
-              </div>
-            </div>
-          </div>
+        <div className="flex space-x-3 sm:space-x-4">
+          {[Facebook, Instagram, Twitter].map((Social, i) => (
+            <a
+              key={i}
+              href="#"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-accent hover:text-black transition-all duration-300 border border-white/10 group"
+            >
+              <Social size={18} />
+            </a>
+          ))}
         </div>
+      </div>
 
-        {/* Tags */}
-        <div className="border-t border-white/5 pt-12 mb-12">
-          <div className="flex flex-wrap gap-2">
-            {SERVICE_AREAS.map(area => (
-              <span key={area} className="text-[9px] uppercase font-black text-gray-600 bg-white/5 border border-white/5 px-3 py-1.5 rounded-lg">
-                {area} Support
-              </span>
-            ))}
+
+      {/* Quick Links */}
+      <div className="space-y-6 md:space-y-8">
+        <h3 className="text-white font-black uppercase tracking-widest text-xs border-l-4 border-accent pl-3 sm:pl-4">
+          Company
+        </h3>
+
+        <ul className="space-y-3 md:space-y-4">
+          <li><Link to="/" className="text-gray-500 text-sm hover:text-accent transition-colors font-bold uppercase tracking-wider">Home</Link></li>
+          <li><Link to="/services" className="text-gray-500 text-sm hover:text-accent transition-colors font-bold uppercase tracking-wider">Services</Link></li>
+          <li><Link to="/about" className="text-gray-500 text-sm hover:text-accent transition-colors font-bold uppercase tracking-wider">About Us</Link></li>
+          <li><Link to="/contact" className="text-gray-500 text-sm hover:text-accent transition-colors font-bold uppercase tracking-wider">Contact</Link></li>
+        </ul>
+      </div>
+
+
+      {/* Services */}
+      <div className="space-y-6 md:space-y-8">
+        <h3 className="text-white font-black uppercase tracking-widest text-xs border-l-4 border-accent pl-3 sm:pl-4">
+          Expertise
+        </h3>
+
+        <ul className="space-y-3 md:space-y-4">
+          {SERVICES.slice(0, 5).map(service => (
+            <li key={service.id}>
+              <Link
+                to="/services"
+                className="text-gray-500 text-xs sm:text-sm hover:text-accent transition-colors font-bold uppercase tracking-wider"
+              >
+                {service.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+
+      {/* Contact */}
+      <div className="space-y-6 md:space-y-8">
+        <h3 className="text-white font-black uppercase tracking-widest text-xs border-l-4 border-accent pl-3 sm:pl-4">
+          Headquarters
+        </h3>
+
+        <div className="space-y-5 md:space-y-6">
+          <div className="flex items-start space-x-3 sm:space-x-4">
+            <MapPin size={18} className="text-accent flex-shrink-0" />
+            <span className="text-gray-500 text-sm font-medium">
+              Al Quoz Industrial Area 3, Dubai, United Arab Emirates
+            </span>
           </div>
-        </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-700 font-black uppercase tracking-[0.2em] border-t border-white/5 pt-12">
-          <p>© {new Date().getFullYear()} {COMPANY_NAME}. All Rights Reserved.</p>
-          <div className="flex space-x-8 mt-6 md:mt-0">
-            <a href="#" className="hover:text-accent transition-colors">Privacy</a>
-            <a href="#" className="hover:text-accent transition-colors">Terms</a>
+          <div className="flex items-center space-x-3 sm:space-x-4">
+            <Phone size={18} className="text-accent flex-shrink-0" />
+            <a
+              href={`tel:${PHONE_NUMBER}`}
+              className="text-white text-base sm:text-lg font-black tracking-tight hover:text-accent transition-colors"
+            >
+              {PHONE_NUMBER}
+            </a>
+          </div>
+
+          <div className="flex items-center space-x-3 sm:space-x-4">
+            <Mail size={18} className="text-accent flex-shrink-0" />
+            <span className="text-gray-500 text-sm font-medium break-all">
+              dispatch@dubairapid.com
+            </span>
           </div>
         </div>
       </div>
 
-      {/* Background decoration */}
-      <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
-    </footer>
+    </div>
+
+
+    {/* Tags */}
+    <div className="border-t border-white/5 pt-10 md:pt-12 mb-10 md:mb-12">
+      <div className="flex flex-wrap gap-2">
+        {SERVICE_AREAS.map(area => (
+          <span
+            key={area}
+            className="text-[9px] uppercase font-black text-gray-600 bg-white/5 border border-white/5 px-2.5 py-1 rounded-lg"
+          >
+            {area} Support
+          </span>
+        ))}
+      </div>
+    </div>
+
+
+    {/* Bottom Bar */}
+    <div className="flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-700 font-black uppercase tracking-[0.15em] md:tracking-[0.2em] border-t border-white/5 pt-8 md:pt-12">
+      
+      <p className="text-center md:text-left">
+        © {new Date().getFullYear()} {COMPANY_NAME}. All Rights Reserved.
+      </p>
+
+      <div className="flex space-x-6 md:space-x-8 mt-5 md:mt-0">
+        <a href="#" className="hover:text-accent transition-colors">Privacy</a>
+        <a href="#" className="hover:text-accent transition-colors">Terms</a>
+      </div>
+
+    </div>
+
+  </div>
+
+  {/* Background decoration */}
+  <div className="absolute -bottom-40 -left-40 w-72 h-72 sm:w-96 sm:h-96 bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
+
+</footer>
   );
 };
 
