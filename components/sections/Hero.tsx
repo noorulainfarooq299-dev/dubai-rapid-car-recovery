@@ -8,8 +8,8 @@ const Hero: React.FC = () => {
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-black">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/public/main.webp" 
+        <img
+          src="/main.webp"
           alt="Tow truck assisting a broken-down car at night in Dubai"
           className="w-full h-full object-cover opacity-50"
         />
@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5">
-            <motion.a 
+            <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href={`tel:${PHONE_NUMBER}`}
@@ -50,8 +50,8 @@ const Hero: React.FC = () => {
               <Phone size={24} />
               <span>Call Now</span>
             </motion.a>
-            
-            <motion.a 
+
+            <motion.a
               whileHover={{ backgroundColor: 'rgba(255,255,255,0.1)' }}
               href="#contact"
               className="flex items-center justify-center space-x-3 bg-white/5 border border-white/20 text-white px-10 py-5 rounded font-bold text-xl uppercase backdrop-blur-sm transition-all"
@@ -68,8 +68,8 @@ const Hero: React.FC = () => {
               { label: "Technicians", val: "Certified" },
               { label: "Status", val: "Available 24/7" }
             ].map((stat, i) => (
-              <motion.div 
-                key={i} 
+              <motion.div
+                key={i}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 + i * 0.1 }}
@@ -84,7 +84,7 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="absolute bottom-10 right-10 z-10 hidden lg:block">
-        <motion.div 
+        <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 3, repeat: Infinity }}
           className="text-white/20 uppercase font-black text-sm tracking-[0.5em] vertical-text"
